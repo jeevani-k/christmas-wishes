@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #001d3d, #003566);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
+  body{
+    background: url(moon.jpg) no-repeat;
+    background-size: 100% ;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .shooting-star {
+    position: absolute;
+    top: 10;
+    left: -120px;
+    width: 250px;
+    height: 2px;
+    background: url(https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/christmas/shooting-star.png) center center no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(20deg);
+    animation: 30s falling-star 0.2s infinite;
+  }
+  
+  .santa {
+    position: center;
+    top: 20%;
+    left: -200px; /* Start off-screen */
+    width: 300px; /* Adjust size of Santa and sleigh */
+    height: auto;
+    background: url("raindeer.jpg") center center no-repeat;
+    background-size: ;
+    overflow: hidden;
+    z-index: 2;
+    animation: santa-fly 15s linear infinite; /* Smooth, infinite animation */
+  }
+  
+  @keyframes santa-fly {
+    0% {
+      transform: translateX(-200px); /* Start off-screen */
+    }
+    100% {
+      transform: translateX(100vw); /* Fly across the screen */
+    }
+  }
+  @keyframes falling-star {
+    0% {
+      transform: translate3d(0, 0, 0) rotate(10deg);
+      opacity: 1;
+    }
+    25%, 100% {
+      transform: translate3d(100vw, 30vh, 0) rotate(10deg);
+      opacity: 0;
+    }
+  }
+  
+  .tree{
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    z-index: 1;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(calc(-50% + 300px), calc(-50% + 500px)) rotate(180deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(calc(-50% + 500px), calc(-50% + 700px)) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .gift {
+    position: absolute;
+    bottom: 100px; /* Aligns it with the bottom of the tree */
+    left: 15%; /* Start near the center */
+    transform: translateX(-40%); /* Adjusts to the left */
+    width: 90%; /* Adjust size */
+    height: 20;
+    max-width: 300px;
+    z-index: 2; /* Ensure it appears above background but below text */
+    animation:  2s infinite; /* Optional: Adds a bouncing effect */
+  }
+  .snowman{
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+    transform: translateX(-40%);
+    width: 30;
+    height: 20;
+    max-width: 300px;
+    z-index: 1;
+
+  }
+  .snowman2{
+    position: absolute;
+    bottom: 20px;
+    right: 5%;
+    transform: translateX(-40%);
+    width: 500;
+    height: 50;
+    max-width: 200px;
+    z-index: 1;
+  }
+
+
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateX(-40%) translateY(0);
+    }
+    50% {
+      transform: translateX(-40%) translateY(-10px); /* Moves gift slightly up */
+    }
+  }
+  .snow-hill{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .wish {
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Cursive , Arial, sans-serif;
+    color: #fff;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333, 0 0 20px #ff6666;
+    animation: sparkle 2s infinite;
+    z-index: 4;
+  }
+  
+  @keyframes sparkle {
+    0%, 100% {
+      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333, 0 0 20px #ff6666;
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900, 0 0 30px #ff6600;
+      transform: scale(1.1);
+    }
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .music-controls {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.music-controls button {
+    padding: 10px;
+    background-color: #003566;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.music-controls input[type="range"] {
+    cursor: pointer;
+}

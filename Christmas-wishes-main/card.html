@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas 2024</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Shooting star -->
+        <div class="shooting-star"></div>
+        
+        <!-- Christmas wish -->
+        <h1 class="wish">Merry Christmas</h1>
+        <font color="white" size="10" face="brush script MT" >A gift for every reason and every season</font>
+        
+        <!-- Christmas tree -->
+        <img class="tree" src="https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/christmas/christmasTree.webp" alt="Christmas Tree">
+    
+        
+        <!-- Snowy hill -->
+        <img class="snow-hill" src="https://raw.githubusercontent.com/farazc60/Project-Images/refs/heads/main/christmas/snowyHills.webp" alt="Snowy Hill">
+        
+        <!-- Star -->
+        <img class="gift" src="gift.png" alt="Gift">
+        
+        <!-- Santa -->
+        <img class="santa" src="raindeer.png" alt="Santa Claus">
+
+        <!--Snow man -->
+        <img class="snowman" src="snowman1.png" alt="Snow man">
+
+        <!--Snow man2-->
+        <img class="snowman2" src="smc.png" alt="Snow man2">
+
+        <audio id="background-music" autoplay loop>
+            <source src="christmas.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <!-- Optional: Buttons for Music Controls -->
+        <div class="music-controls">
+            <button id="play-btn">Play</button>
+            <button id="pause-btn">Pause</button>
+            <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="0.5">
+        </div>
+        
+
+    
+    </div>
+    
+    <!-- Snowfall canvas -->
+    <canvas id="snow"></canvas>
+    
+    <!-- Script -->
+    <script src="card.js"></script>
+</body>
+</html>
